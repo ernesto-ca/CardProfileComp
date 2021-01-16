@@ -7,7 +7,6 @@
     --font-size-big: 18px;
     --font-color-titles: hsl(229, 23%, 23%);
     --font-weight-7: 700;
-    /* Name and stats */
 
     --font-size-medium: 16px;
     --font-size-small: 10px;
@@ -16,6 +15,8 @@
     --color-dark-gray: hsla(0, 0%, 59%, 0.459);
     --font-family: 'Kumbh Sans', sans-serif;
     --font-weight-4: 400;
+
+    --card-sides-size: 24rem;
 }
 
 * {
@@ -25,6 +26,7 @@
     font-family: var(--font-family);
 }
 
+/* Dislays */
 body,
 .card .header .photo,
 .card .body,
@@ -40,6 +42,7 @@ body {
     justify-content: center;
 }
 
+/* Patterns Start*/
 .pattern {
     position: fixed;
     z-index: -1;
@@ -54,7 +57,9 @@ body {
     top: 50%;
     left: 50%;
 }
+/* Patterns End*/
 
+/* Card component Start*/
 .card {
     width: 24rem;
     height: 24rem;
@@ -79,11 +84,11 @@ body {
     height: 7rem;
     border-radius: 100%;
     background-color: white;
+    justify-content: center;
     position: relative;
     top: 60%;
     left: 136px;
     float: none;
-    justify-content: center;
 }
 
 .card .header .photo img {
@@ -139,7 +144,9 @@ body {
     color: var(--font-color-body);
     letter-spacing: 2px;
 }
+/* Card component End*/
 
+/* Credits Start*/
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -149,4 +156,14 @@ body {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+/* Credits End*/
+
+@media only screen and (max-width: 900px), (orientation: portrait) {
+    .card {
+        width: 22rem;
+    }
+    .card .header .photo {
+        left: 120px;
+    }
 }
