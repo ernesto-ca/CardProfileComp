@@ -10,9 +10,10 @@
     /* Name and stats */
 
     --font-size-medium: 16px;
-    --font-size-small: 12px;
+    --font-size-small: 10px;
 
     --font-color-body: hsl(227, 10%, 46%);
+    --color-dark-gray: hsla(0, 0%, 59%, 0.459);
     --font-family: 'Kumbh Sans', sans-serif;
     --font-weight-4: 400;
 }
@@ -101,7 +102,8 @@ body {
     margin-top: 10%;
 }
 
-.card .body .main-data h1 {
+.card .body .main-data h1,
+.card .footer .stats h1 {
     font-size: var(--font-size-big);
     font-weight: var(--font-weight-7);
     color: var(--font-color-titles);
@@ -117,6 +119,25 @@ body {
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-4);
     color: var(--font-color-body);
+}
+
+.card .footer {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 24px;
+    border-top: 1px solid var(--color-dark-gray);
+}
+
+.card .footer .stats {
+    text-align: center;
+}
+
+.card .footer .stats p {
+    margin-top: 8px;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-4);
+    color: var(--font-color-body);
+    letter-spacing: 2px;
 }
 
 .attribution {
